@@ -1,0 +1,23 @@
+<br>
+<a href="#!/api/mahasiswa/add" class="btn btn-success"> Add Mahasiswa</a>
+<table class="table" ng-init="getMahasiswa()">
+  <thead>
+    <th>npm</th>
+    <th>nama</th>
+    <th>alamat</th>
+    <th>action</th>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="d in mahasiswaa.data">
+      <td>{{d.npm}}</td>
+      <td>{{d.nama}}</td>
+      <td>{{d.alamat}}</td>
+      <td>
+        <a href="#!/api/mahasiswa/edit/{{d.npm}}" class="btn btn-info">edit</a>
+        <a href="#!/api/mahasiswa/detail/{{d.npm}}" class="btn btn-primary">Read</a>
+        <a href="#" class="btn btn-danger" ng-click="removeMahasiswa(d.npm)"> delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
